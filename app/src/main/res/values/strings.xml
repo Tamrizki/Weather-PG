@@ -5,4 +5,5 @@
     <string name="pgtest1">PGTest1</string>
     <string name="pgtest2">PGTest2</string>
     <string name="pgtest3">PGTest3</string>
+    <string name="weather">Weather</string>
 </resources>

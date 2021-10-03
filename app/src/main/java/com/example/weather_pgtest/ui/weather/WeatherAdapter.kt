@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.weather_pgtest.data.remote.response.DailyItem
 import com.example.weather_pgtest.databinding.ItemRowWeatherBinding
-import com.example.weather_pgtest.utils.Cons
 import com.example.weather_pgtest.utils.convertToCelcius
 import com.example.weather_pgtest.utils.getDay
 import com.example.weather_pgtest.utils.loadImageFromUrl

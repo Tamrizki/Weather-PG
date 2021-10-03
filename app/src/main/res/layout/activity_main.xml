@@ -6,30 +6,60 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.main.MainActivity">
-
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginHorizontal="24dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginHorizontal="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:layout_width="match_parent"
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/ll_weather"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Weather"
-            android:textAllCaps="false"
-            android:layout_margin="10dp"/>
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_cloudy"
+                android:layout_gravity="center_horizontal"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_weather"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Weather"
+                android:background="@drawable/bg_blue_rad10"
+                android:textColor="@color/white"
+                style="@style/tv18_semi"
+                android:textAllCaps="false"
+                android:layout_margin="10dp"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:layout_width="match_parent"
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/ll_pgt"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="PG Test"
-            android:textAllCaps="false"
-            android:layout_margin="10dp"/>
-
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_puzzle"
+                android:layout_gravity="center_horizontal"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_pgt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PG Test"
+                android:background="@drawable/bg_blue_rad10"
+                android:textColor="@color/white"
+                style="@style/tv18_semi"
+                android:textAllCaps="false"
+                android:layout_margin="10dp"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
     </androidx.appcompat.widget.LinearLayoutCompat>
 </androidx.constraintlayout.widget.ConstraintLayout>

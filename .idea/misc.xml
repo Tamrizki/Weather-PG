@@ -4,9 +4,15 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="../../../../.gradle/caches/transforms-3/05d401bccdd1e06b250357a305a89b12/transformed/appcompat-1.3.1/res/layout/support_simple_spinner_dropdown_item.xml" value="0.3338541666666667" />
+        <entry key="app/src/main/res/drawable/bg_blue_rad10.xml" value="0.20555555555555555" />
+        <entry key="app/src/main/res/drawable/bg_grey_rad10.xml" value="0.20555555555555555" />
+        <entry key="app/src/main/res/drawable/bg_grey_rad45.xml" value="0.20555555555555555" />
+        <entry key="app/src/main/res/drawable/bg_grey_rad6.xml" value="0.20555555555555555" />
         <entry key="app/src/main/res/drawable/ic_baseline_filter_3_24.xml" value="0.21296296296296297" />
         <entry key="app/src/main/res/drawable/ic_cancel.xml" value="0.21296296296296297" />
         <entry key="app/src/main/res/drawable/ic_checked.xml" value="0.21296296296296297" />
+        <entry key="app/src/main/res/drawable/ic_cloudy.xml" value="0.20555555555555555" />
+        <entry key="app/src/main/res/drawable/ic_puzzle.xml" value="0.20555555555555555" />
         <entry key="app/src/main/res/drawable/item_row_weather.xml" value="0.20555555555555555" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_pgtest.xml" value="0.165" />
@@ -17,6 +23,9 @@
         <entry key="app/src/main/res/layout/fragment_p_g_test3.xml" value="0.25" />
         <entry key="app/src/main/res/layout/item_row_pgt1.xml" value="0.2431182684206683" />
         <entry key="app/src/main/res/layout/item_row_weather.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/skeleton_list.xml" value="0.3338541666666667" />
+        <entry key="app/src/main/res/layout/skeleton_text_big.xml" value="0.3338541666666667" />
+        <entry key="app/src/main/res/layout/skeleton_text_small.xml" value="0.3338541666666667" />
         <entry key="app/src/main/res/menu/bottom_navigation.xml" value="0.3338541666666667" />
       </map>
     </option>

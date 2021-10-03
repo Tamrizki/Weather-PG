@@ -1,15 +1,14 @@
 package com.example.weather_pgtest.ui.weatherdetail
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.weather_pgtest.R
 import com.example.weather_pgtest.data.remote.response.DailyItem
 import com.example.weather_pgtest.databinding.ActivityWeatherDetailBinding
 import com.example.weather_pgtest.ui.base.BaseActivity
 import com.example.weather_pgtest.utils.convertToCelcius
 import com.example.weather_pgtest.utils.getDay
 import com.example.weather_pgtest.utils.loadImageFromUrl
-import org.jetbrains.anko.alert
 import org.jetbrains.anko.toast
 import java.lang.Exception
 
@@ -27,7 +26,7 @@ class WeatherDetailActivity : BaseActivity<ActivityWeatherDetailBinding>(
         super.onCreate(savedInstanceState)
         setupView()
         setupListener()
-        supportActionBar?.title= "Weather"
+        supportActionBar?.title= getString(R.string.weather)
     }
 
     private fun setupListener() {
@@ -56,7 +55,7 @@ class WeatherDetailActivity : BaseActivity<ActivityWeatherDetailBinding>(
         try {
             val w = weather!!
             val intent = Intent(Intent.ACTION_SEND).apply {
-                setType("text/plain")
+                type = "text/plain"
                 putExtra(Intent.EXTRA_TEXT, "Today's Weather\n" +
                         "${getDay(w.dt!!)} - ${w.weather?.get(0)?.main}\n" +
                         "$location\n" +
@@ -64,7 +63,7 @@ class WeatherDetailActivity : BaseActivity<ActivityWeatherDetailBinding>(
             }
             startActivity(Intent.createChooser(intent, "Share"))
         }catch (e: Exception){
-            toast("Anda perlu meng-instal Aplikasi Whatsap terlebih dahulu")
+            toast("try again")
         }
 
     }

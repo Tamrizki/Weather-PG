@@ -1,9 +1,10 @@
 package com.example.weather_pgtest.ui.weather
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.ethanhua.skeleton.Skeleton
+import com.ethanhua.skeleton.SkeletonScreen
+import com.example.weather_pgtest.R
 import com.example.weather_pgtest.data.remote.response.DailyItem
 import com.example.weather_pgtest.data.remote.response.WeatherResponse
 import com.example.weather_pgtest.data.viewmodel.WeatherViewModel
@@ -20,20 +21,25 @@ class WeatherActivity : BaseActivity<ActivityWeatherBinding>(
     private val vm: WeatherViewModel by inject()
     private lateinit var weatherAdapter: WeatherAdapter
     private var location  = "-"
+    private var sDay : SkeletonScreen? = null
+    private var sTemp : SkeletonScreen? = null
+    private var sList : SkeletonScreen? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setupList()
         setupObserver()
     }
 
     private fun setupObserver(){
         vm.getWeather(33.44, -94.04).observe(this, {
             when(it){
-                is State.Loading -> Log.d("TAGTAGTAG", "onLoading: ")
+                is State.Loading -> showSkeleton()
                 is State.Success -> {
-                    Log.d("TAGTAGTAG", "on success ${it.data}")
+                    hideSkeleton()
                     setupView(it.data)
                 }
-                is State.Error -> Log.d("TAGTAGTAG", "onError: ${it.throwable}")
+                is State.Error -> hideSkeleton()
             }
         })
     }
@@ -48,11 +54,12 @@ class WeatherActivity : BaseActivity<ActivityWeatherBinding>(
             tvWeatherDesc.text = current.weather?.get(0)!!.main
             ivWeather.loadImageFromUrl("${current.weather[0]?.icon}")
             location = data.timezone!!
-            setupList(data.daily)
+            weatherAdapter.setData(data.daily!!)
+
         }
     }
 
-    private fun setupList(daily: List<DailyItem>?) {
+    private fun setupList() {
         weatherAdapter = WeatherAdapter(this, object : WeatherAdapter.onAdapterListener{
             override fun onClick(data: DailyItem) {
                 startActivity<WeatherDetailActivity>(
@@ -66,6 +73,17 @@ class WeatherActivity : BaseActivity<ActivityWeatherBinding>(
             layoutManager = LinearLayoutManager(this@WeatherActivity)
             setHasFixedSize(true)
         }
-        weatherAdapter.setData(daily!!)
+    }
+
+    private fun showSkeleton(){
+        sDay = Skeleton.bind(binding.tvToday).load(R.layout.skeleton_text_small).show()
+        sTemp = Skeleton.bind(binding.tvTemp).load(R.layout.skeleton_text_big).show()
+        sList = Skeleton.bind(binding.rvWeather).adapter(weatherAdapter).load(R.layout.skeleton_list).show()
+    }
+
+    private fun hideSkeleton(){
+        sDay?.hide()
+        sTemp?.hide()
+        sList?.hide()
     }
 }
