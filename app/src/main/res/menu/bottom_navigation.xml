@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/PGTest1Fragment"
+        android:icon="@drawable/ic_baseline_filter_1_24"
+        android:title="@string/pgtest1"/>
+
+    <item
+        android:id="@+id/PGTest2Fragment"
+        android:icon="@drawable/ic_baseline_filter_2_24"
+        android:title="@string/pgtest2"/>
+
+    <item
+        android:id="@+id/PGTest3Fragment"
+        android:icon="@drawable/ic_baseline_filter_3_24"
+        android:title="@string/pgtest3"/>
+</menu>

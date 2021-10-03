@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/pgtest_navigation"
+    app:startDestination="@id/PGTest1Fragment">
+
+    <fragment
+        android:id="@+id/PGTest1Fragment"
+        android:name="com.example.weather_pgtest.ui.pgtest1.PGTest1Fragment"
+        android:label="fragment_p_g_test1"
+        tools:layout="@layout/fragment_p_g_test1" />
+
+    <fragment
+        android:id="@+id/PGTest2Fragment"
+        android:name="com.example.weather_pgtest.ui.pgtest2.PGTest2Fragment"
+        android:label="fragment_p_g_test2"
+        tools:layout="@layout/fragment_p_g_test2" />
+
+    <fragment
+        android:id="@+id/PGTest3Fragment"
+        android:name="com.example.weather_pgtest.ui.pgtest3.PGTest3Fragment"
+        android:label="fragment_p_g_test3"
+        tools:layout="@layout/fragment_p_g_test3" />
+</navigation>

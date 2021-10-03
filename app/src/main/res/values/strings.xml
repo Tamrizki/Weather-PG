@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Weather-PGTest</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="pgtest1">PGTest1</string>
+    <string name="pgtest2">PGTest2</string>
+    <string name="pgtest3">PGTest3</string>
+</resources>
