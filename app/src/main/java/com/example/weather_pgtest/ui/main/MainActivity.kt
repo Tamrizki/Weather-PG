@@ -1,4 +1,4 @@
-package com.example.weather_pgtest
+package com.example.weather_pgtest.ui.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

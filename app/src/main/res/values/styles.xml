@@ -12,6 +12,12 @@
         <item name="android:textColor">@color/c_black</item>
     </style>
 
+    <style name="tv16_semi">
+        <item name="fontFamily">@font/montserrat_semibold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/c_black</item>
+    </style>
+
     <style name="tv14_semi">
         <item name="fontFamily">@font/montserrat_semibold</item>
         <item name="android:textSize">14sp</item>
@@ -23,4 +29,35 @@
         <item name="android:textSize">14sp</item>
         <item name="android:textColor">@color/c_black</item>
     </style>
+
+    <style name="tv12_reg">
+        <item name="fontFamily">@font/montserrat_regular</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/c_black</item>
+    </style>
+
+    <style name="tv18_reg">
+        <item name="fontFamily">@font/montserrat_regular</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/c_black</item>
+    </style>
+
+    <style name="tv18_semi">
+        <item name="fontFamily">@font/montserrat_semibold</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/c_black</item>
+    </style>
+
+    <style name="tv24_reg">
+        <item name="fontFamily">@font/montserrat_regular</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/c_black</item>
+    </style>
+
+    <style name="tv60_reg">
+        <item name="fontFamily">@font/montserrat_regular</item>
+        <item name="android:textSize">60sp</item>
+        <item name="android:textColor">@color/c_black</item>
+    </style>
+
 </resources>

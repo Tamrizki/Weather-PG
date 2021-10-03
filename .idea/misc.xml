@@ -7,12 +7,16 @@
         <entry key="app/src/main/res/drawable/ic_baseline_filter_3_24.xml" value="0.21296296296296297" />
         <entry key="app/src/main/res/drawable/ic_cancel.xml" value="0.21296296296296297" />
         <entry key="app/src/main/res/drawable/ic_checked.xml" value="0.21296296296296297" />
+        <entry key="app/src/main/res/drawable/item_row_weather.xml" value="0.20555555555555555" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_pgtest.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/activity_weather.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_weather_detail.xml" value="0.18333333333333332" />
         <entry key="app/src/main/res/layout/fragment_p_g_test1.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_p_g_test2.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_p_g_test3.xml" value="0.25" />
         <entry key="app/src/main/res/layout/item_row_pgt1.xml" value="0.2431182684206683" />
+        <entry key="app/src/main/res/layout/item_row_weather.xml" value="0.25" />
         <entry key="app/src/main/res/menu/bottom_navigation.xml" value="0.3338541666666667" />
       </map>
     </option>
