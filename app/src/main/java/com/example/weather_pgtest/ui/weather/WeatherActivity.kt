@@ -29,6 +29,16 @@ class WeatherActivity : BaseActivity<ActivityWeatherBinding>(
         super.onCreate(savedInstanceState)
         setupList()
         setupObserver()
+        setupListener()
+    }
+
+    private fun setupListener() {
+        binding.apply {
+            swRefresh.setOnRefreshListener {
+                swRefresh.isRefreshing = true
+                setupObserver()
+            }
+        }
     }
 
     private fun setupObserver(){
@@ -76,14 +86,21 @@ class WeatherActivity : BaseActivity<ActivityWeatherBinding>(
     }
 
     private fun showSkeleton(){
-        sDay = Skeleton.bind(binding.tvToday).load(R.layout.skeleton_text_small).show()
-        sTemp = Skeleton.bind(binding.tvTemp).load(R.layout.skeleton_text_big).show()
-        sList = Skeleton.bind(binding.rvWeather).adapter(weatherAdapter).load(R.layout.skeleton_list).show()
+        if (sDay == null){
+            sDay = Skeleton.bind(binding.tvToday).load(R.layout.skeleton_text_small).show()
+            sTemp = Skeleton.bind(binding.tvTemp).load(R.layout.skeleton_text_big).show()
+            sList = Skeleton.bind(binding.rvWeather).adapter(weatherAdapter).load(R.layout.skeleton_list).show()
+        }else{
+            sDay?.show()
+            sTemp?.show()
+            sList?.show()
+        }
     }
 
     private fun hideSkeleton(){
         sDay?.hide()
         sTemp?.hide()
         sList?.hide()
+        binding.swRefresh.isRefreshing = false
     }
 }
